@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "./projects.css";
 
 const projectsData = [
@@ -32,6 +32,7 @@ const projectsData = [
 ];
 
 const Projects = () => {
+    const [project , setProject]=useState("");
   return (
     <div className='projects'>
       <h2 className="projects-title">Projects</h2>
