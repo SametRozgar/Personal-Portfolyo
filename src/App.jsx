@@ -3,7 +3,8 @@ import Navbar from './components/Navbar'
 import Introduce from './components/Introduce'
 import Skils from './components/Skils'
 import Profile from './components/Profile'
-import Projects from './components/Projects'
+
+
 function App() {
  
 
@@ -13,7 +14,8 @@ function App() {
      <Introduce/>
      <Skils/>
      <Profile/>
-     <Projects/>
+   
+   
     </>
   )
 }
