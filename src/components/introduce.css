@@ -1,0 +1,82 @@
+body {
+    padding: 30px;
+}
+
+.introduce {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+}
+
+.introduce-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 50%;
+}
+
+.introduce-name {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.introduce-line {
+    width: 40px;
+    height: 2px;
+    background-color: #3730A3;
+}
+
+.introduce-text {
+    color: #3730A3;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.introduce-title {
+    font-size: 42px;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.introduce-description {
+    color: #6c6c6c;
+    font-size: 16px;
+    max-width: 90%;
+}
+
+.introduce-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.introduce-btn {
+    text-decoration: none;
+    border: 1px solid #3730A3;
+    padding: 12px 20px;
+    border-radius: 8px;
+    color: #3730A3;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.introduce-btn:hover {
+    background-color: #3730A3;
+    color: white;
+}
+
+.introduce-btn-primary {
+    background-color: #3730A3;
+    color: white;
+}
+
+.introduce-btn-primary:hover {
+    background-color: #2a2580;
+}
+
+.introduce-image img {
+    width: 320px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
