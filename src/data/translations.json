@@ -1,0 +1,27 @@
+{
+    "en":{
+       "skils":"skils" ,
+       "Projects":"Projects",
+       "Hire me":"Hire me",
+       "name":"Samet Rozgar",
+       "desciption":"Fullstack Web Developer",
+       "resume":"weather is sunny",
+       "github":"Github",
+       "linkedin":"linkedin"
+
+
+    },
+
+    "tr":{
+        "skils":"Yetenekler" ,
+        "Projects":"Projeler",
+        "Hire me":"Birlikte Çalışalım",
+        "name":"Samet Rozgar",
+        "desciption":"Fullstack Web Developer",
+        "resume":"hava güneşli",
+        "github":"Github",
+        "linkedin":"linkedin"
+ 
+ 
+     }
+}

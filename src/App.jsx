@@ -10,6 +10,7 @@ function App() {
 
   return (
     <>
+    
      <Navbar/>
      <Introduce/>
      <Skils/>
