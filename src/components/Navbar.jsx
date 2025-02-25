@@ -1,20 +1,16 @@
 import React, { useEffect, useState } from "react";
 import "./navbar.css";
 import useDarkMode from "../hooks/useDarkMode";
-import ceviri from "../data/translations.json"
+import { useContext } from "react";
+import { ContextLanguage } from "../context/LanguageContexts";
 const Navbar = () => {
   const [isDarkMode,setIsDarkMode]=useDarkMode();
-  const [language,setLanguage]=useState("en")
-  const [content,setContent]=useState(ceviri[language])
-  
-  useEffect(()=>
-  {
-  setContent(ceviri[language])
-  },[language])
 
-  const dildegistir =()=>
+  const {dilDegistir,content}=useContext(ContextLanguage)
+  
+  const changeLanguage=()=>
   {
-    setLanguage("tr")
+    dilDegistir("tr")
   }
   return (
     <div className="navbar">
@@ -28,7 +24,7 @@ const Navbar = () => {
           sdfsd
         </button>
 
-        <button onClick={dildegistir}>
+        <button onClick={changeLanguage}>
           dili değistir
         </button>
         
