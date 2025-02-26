@@ -51,7 +51,14 @@
          "name": "Node.js",
          "description": "Node.js is a runtime environment that allows executing JavaScript code outside the browser, commonly used for backend development."
        }
-     ]
+     ],
+    
+     "project1_title": "Game Of Thrones Fan Page",
+     "project1_desc": "A 3D interactive website built using HTML, CSS, Three.js, and Blender, featuring animated dragon models and immersive environments.",
+     "project2_title": "Digital Hippo",
+     "project2_desc": "A digital marketplace platform developed with TypeScript, Payload CMS, and tRPCX for seamless e-commerce transactions.",
+     "project3_title": "Animated 3D Store Page",
+     "project3_desc": "An e-commerce store with 3D animated product displays, built using Three.js and React, featuring real-time interactive shopping experience."
    },
    "tr": {
      "skills": "Yetenekler",
@@ -105,7 +112,14 @@
          "name": "Node.js",
          "description": "Node.js, JavaScript kodunun tarayıcı dışında çalıştırılmasını sağlayan bir çalışma ortamıdır ve genellikle arka uç geliştirme için kullanılır."
        }
-     ]
+     ],
+    
+     "project1_title": "Game Of Thrones Hayran Sayfası",
+     "project1_desc": "HTML, CSS, Three.js ve Blender kullanılarak oluşturulmuş, animasyonlu ejderha modelleri ve sürükleyici ortamlar içeren 3D interaktif bir web sitesi.",
+     "project2_title": "Digital Hippo",
+     "project2_desc": "TypeScript, Payload CMS ve tRPCX kullanılarak geliştirilmiş, kesintisiz e-ticaret işlemleri sunan dijital pazar yeri platformu.",
+     "project3_title": "Animasyonlu 3D Mağaza Sayfası",
+     "project3_desc": "Ürünlerin 3D animasyonlu olarak sunulduğu, Three.js ve React ile geliştirilen gerçek zamanlı interaktif alışveriş deneyimi sağlayan e-ticaret sitesi."
    }
  }
  

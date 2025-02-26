@@ -1,24 +1,53 @@
-.dark
-{
-    background-color: #474646;
-    color: #f3f3ff;
+/* Karanlık Mod */
+.dark {
+    background-color: #000000;
+    color: #fff;
 }
 
+.dark .navbar {
+    color: #fff;
+}
 
+.dark .navbar-link-item {
+    color: #fff;
+    border-color: #fff;
+}
 
+.dark .navbar-link-item:hover {
+    color: #222;
+    background: #fff;
+    border-color: #fff;
+}
 
-
+/* Navbar Genel Stili */
 .navbar {
-    padding: 20px;
+    padding: 15px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 100;
 }
 
+.dark .navbar {
+    background-color: #000;
+}
+
+/* Navbar İçerik Konteyneri */
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* Navbar Logo */
 .navbar-name {
     background-color: #eeebff;
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -27,10 +56,11 @@
     color: #3730A3;
 }
 
+/* Navbar Linkleri */
 .navbar-links {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
 .navbar-link-item {
@@ -38,13 +68,84 @@
     color: #474646;
     font-weight: 500;
     padding: 8px 16px;
-    border: 1px solid transparent;
     border-radius: 8px;
     transition: all 0.3s ease;
 }
 
 .navbar-link-item:hover {
-    border: 1px solid #3730A3;
     color: #3730A3;
     background: #f3f3ff;
+}
+
+/* Tema & Dil Değiştirme Butonları */
+.switch-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.switch-button {
+    background: transparent;
+    border: none;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    font-weight: 500;
+}
+
+.switch-button:hover {
+    color: #3730A3;
+}
+
+/* Karanlık Modda Iconların Beyaz Olması */
+.dark .switch-button {
+    color: #fff;
+}
+
+/* Hamburger Menü Butonu */
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Mobil İçin Menü */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .navbar-links {
+        position: fixed;
+        top: 0;
+        left: -250px;
+        width: 250px;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 60px;
+        transition: left 0.3s ease;
+        gap: 20px;
+    }
+
+    .navbar-links.active {
+        left: 0;
+    }
+
+    .navbar-link-item {
+        color: #fff;
+       
+        padding: 12px 20px;
+    }
+
+    .switch-button {
+        color: #fff;
+    }
 }

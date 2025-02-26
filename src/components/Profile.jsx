@@ -10,8 +10,7 @@ const Profile = () => {
       <h2 className="profile-title">{content.profile}</h2>
 
       <div className="profile-container">
-        {/* Profil Bilgileri */}
-        <div className="profile-info" id="links-navbar">
+        <div className="profile-info">
           <h4>{content.profile}</h4>
           <ul>
             <li>
@@ -32,7 +31,6 @@ const Profile = () => {
           </ul>
         </div>
 
-        
         <div className="profile-about">
           <h4>{content.about_me}</h4>
           <p>{content.description}</p>

@@ -1,46 +1,48 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import "./projects.css";
-import { useContext } from 'react';
 import { ContextLanguage } from '../context/LanguageContexts';
-const projectsData = [
-  {
-    id: 1,
-    title: "Workintech",
-    description: "A simple, customizable, minimal setup cookie plugin that allows your users to select which cookies to accept or decline...",
-    image: "https://static.vecteezy.com/system/resources/thumbnails/021/957/915/small/cat-having-bad-mood-angry-pet-bad-emotions-anger-dissatisfaction-with-life-negative-facial-expression-bad-day-misfortune-concept-generative-ai-photo.jpg",
-    tags: ["react", "redux", "axios"],
-    github: "#",
-    live: "#"
-  },
-  {
-    id: 2,
-    title: "Random Jokes",
-    description: "A simple, customizable, minimal setup cookie plugin that allows your users to select which cookies to accept or decline...",
-    image: "https://static.vecteezy.com/system/resources/thumbnails/021/957/915/small/cat-having-bad-mood-angry-pet-bad-emotions-anger-dissatisfaction-with-life-negative-facial-expression-bad-day-misfortune-concept-generative-ai-photo.jpg",
-    tags: ["react", "redux", "axios"],
-    github: "#",
-    live: "#"
-  },
-  {
-    id: 3,
-    title: "Journey",
-    description: "A simple, customizable, minimal setup cookie plugin that allows your users to select which cookies to accept or decline...",
-    image: "https://static.vecteezy.com/system/resources/thumbnails/021/957/915/small/cat-having-bad-mood-angry-pet-bad-emotions-anger-dissatisfaction-with-life-negative-facial-expression-bad-day-misfortune-concept-generative-ai-photo.jpg",
-    tags: ["react", "redux", "axios"],
-    github: "#",
-    live: "#"
-  }
-];
+import useDarkMode from '../hooks/useDarkMode';
+import image1 from "../assets/img/image.png";
+import image2 from "../assets/img/project.jpeg";
+import image3 from "../assets/img/projects-2.jpeg";
 
 const Projects = () => {
+  const { content } = useContext(ContextLanguage);
+  const [isDarkMode] = useDarkMode();
 
-  const {content } = useContext(ContextLanguage);
-
-
+  const projectsData = [
+    {
+      id: 1,
+      title: content.project1_title,
+      description: content.project1_desc,
+      image: image1,
+      tags: ["HTML", "CSS", "Three.js", "Blender"],
+      github: "https://github.com/SametRozgar/Game-Of-Thrones-Imdb-Page-With-3D-Dragon-Model",
+      live: "#"
+    },
+    {
+      id: 2,
+      title: content.project2_title,
+      description: content.project2_desc,
+      image: image2,
+      tags: ["TypeScript", "Payload", "tRPCX"],
+      github: "https://github.com/SametRozgar/Digital-Hippo",
+      live: "#"
+    },
+    {
+      id: 3,
+      title: content.project3_title,
+      description: content.project3_desc,
+      image: image3,
+      tags: ["React", "Three.js", "3D Models"],
+      github: "https://github.com/SametRozgar/Animated-3D-iPhone-16-Cart-Desgin",
+      live: "#"
+    }
+  ];
 
   return (
-    <div className='projects'>
-      <h2 className="projects-title">Projects</h2>
+    <div className={`projects ${isDarkMode ? 'dark-mode' : ''}`}> 
+      <h2 className="projects-title">{content.projects}</h2>
       <div className="projects-container">
         {projectsData.map((project) => (
           <div key={project.id} className="projects-card">
@@ -53,8 +55,8 @@ const Projects = () => {
               ))}
             </div>
             <div className="projects-links">
-              <a href={project.github} className="projects-link">Github</a>
-              <a href={project.live} className="projects-link">View Site</a>
+              <a href={project.github} className="projects-link" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a href={project.live} className="projects-link" target="_blank" rel="noopener noreferrer">Live Demo</a>
             </div>
           </div>
         ))}
