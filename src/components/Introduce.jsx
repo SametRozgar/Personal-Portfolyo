@@ -1,28 +1,27 @@
 import React from "react";
 import "./introduce.css";
-
+import { useContext } from "react";
+import { ContextLanguage } from "../context/LanguageContexts";
 const Introduce = () => {
+const{content}=useContext(ContextLanguage)
   return (
     <div className="introduce">
       <div className="introduce-section">
         <div className="introduce-name">
           <span className="introduce-line"></span>
-          <span className="introduce-text">Almila Su</span>
+          <span className="introduce-text">{content.name}</span>
         </div>
         <h1 className="introduce-title">
-          Creative thinker <br />
-          Minimalism lover
+          {content.title}
         </h1>
         <p className="introduce-description">
-          Hi, I'm Almila. I'm a full-stack developer. If you are looking for a
-          Developer who to craft solid and scalable frontend products with great
-          user experiences. Let’s shake hands with me.
+          {content.description}
         </p>
 
         <div className="introduce-links">
           <a className="introduce-btn introduce-btn-primary" href="#">Hire me</a>
-          <a className="introduce-btn" href="#">Github</a>
-          <a className="introduce-btn" href="#">Linkedin</a>
+          <a className="introduce-btn" href="https://github.com/SametRozgar" target="blank">{content.github}</a>
+          <a className="introduce-btn" href="https://www.linkedin.com/in/abd%C3%BClsamet-r%C3%B6zgar-31880122a/">{content.linkedin}</a>
         </div>
       </div>
       <div className="introduce-image">

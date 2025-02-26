@@ -1,34 +1,44 @@
-import React from 'react';
+import React, { useContext } from "react";
 import "./profile.css";
+import { ContextLanguage } from "../context/LanguageContexts";
 
 const Profile = () => {
+  const { content } = useContext(ContextLanguage);
+
   return (
-    <div className='profile'>
-      <h2 className="profile-title">Profile</h2>
+    <div className="profile">
+      <h2 className="profile-title">{content.profile}</h2>
+
       <div className="profile-container">
-        <div className="profile-info">
-          <h4>Profile</h4>
+        {/* Profil Bilgileri */}
+        <div className="profile-info" id="links-navbar">
+          <h4>{content.profile}</h4>
           <ul>
-            <li><strong>Doğum tarihi:</strong> 24.03.1996</li>
-            <li><strong>İkamet Şehri:</strong> Ankara</li>
-            <li><strong>Eğitim Durumu:</strong> Hacettepe Ünv. Biyoloji</li>
-            <li><strong>Lisans,</strong> 2016</li>
-            <li><strong>Tercih Ettiği Rol:</strong> Frontend, UI</li>
+            <li>
+              <strong>{content.birth_date_words}:</strong> {content.birth_date}
+            </li>
+            <li>
+              <strong>{content.city_words}:</strong> {content.city}
+            </li>
+            <li>
+              <strong>{content.education_words}:</strong> {content.education}
+            </li>
+            <li>
+              <strong>{content.license_words}:</strong> {content.license}
+            </li>
+            <li>
+              <strong>{content.role_words}:</strong> {content.role}
+            </li>
           </ul>
         </div>
 
+        
         <div className="profile-about">
-          <h4>About Me</h4>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, 
-            odit laborum aliquam voluptatum nisi mollitia.
-          </p>
-          <p>
-            Minima accusamus ratione soluta aperiam sit voluptate? Dicta quod deserunt 
-            quam temporibus cumque magnam!
-          </p>
+          <h4>{content.about_me}</h4>
+          <p>{content.description}</p>
         </div>
       </div>
+
       <div className="profile-bottom-line"></div>
     </div>
   );

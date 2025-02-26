@@ -4,7 +4,7 @@ import Introduce from './components/Introduce'
 import Skils from './components/Skils'
 import Profile from './components/Profile'
 import { LanguageContexts } from './context/LanguageContexts'
-
+import Projects from './components/Projects'
 function App() {
  
 
@@ -15,6 +15,7 @@ function App() {
      <Introduce/>
      <Skils/>
      <Profile/>
+     <Projects/>
      </LanguageContexts>
    
     </>
